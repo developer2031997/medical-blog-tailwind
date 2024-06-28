@@ -1,5 +1,5 @@
 <template>
-  <div class=" container text-center">
+  <div class="text-center">
     <h1 class=" pt-4 text-4xl">About Page</h1>
     <div class="py-3">
       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod quaerat rem

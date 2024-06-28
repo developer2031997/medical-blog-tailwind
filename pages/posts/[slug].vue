@@ -1,9 +1,9 @@
 <template>
-  <div class="container w-full">
+  <div class="">
    
       <!-- Breadcrumb -->
       <nav
-        class="breadcrum-background flex px-5 py-3 text-gray-700 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700"
+        class="breadcrum-background flex px-5 py-3 my-5 mx-10 text-gray-700 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700"
         aria-label="Breadcrumb"
       >
         <ol
@@ -25,8 +25,8 @@
                   d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z"
                 />
               </svg>
-              <NuxtLink :to="`/posts`" class="text-white"
-                ><b>Posts</b></NuxtLink
+              <NuxtLink :to="`/posts`" class="text-white hover:text-blue"
+                ><b >Posts</b></NuxtLink
               >
             </a>
           </li>
@@ -59,32 +59,32 @@
         </ol>
       </nav>
 
-      <div class="py-5">
+      <div class="mx-10 py-5">
         <ContentDoc :path="`/posts/${slug}`" v-slot="{ doc }">
           <div class="text-center">
-            <h1 class="text-4xl font-bold">{{ doc.title }}</h1>
+            <h1 class="text-4xl font-bold blue">{{ doc.title }}</h1>
             <br />
             <p class="text-xl text-gray-500 mt-2">
               {{ doc.date }} {{ doc.time }}
             </p>
-          </div>
+          </div> 
 
           <div class="flex justify-center">
             <img
               v-if="doc.thumbnail"
               :src="doc.thumbnail"
               :alt="doc.title"
-              class="img-fluid my-3 w-50"
+              class="my-5"
             />
           </div>
           <!-- <hr/> -->
-          <div class="py-3 content-renderer">
+          <div class=" py-3 content-renderer">
             <ContentRenderer :value="doc" />
           </div>
         </ContentDoc>
       </div>
       <div class="col-lg-12 text-center pt-3">
-        <NuxtLink :to="`/posts`" class="btn btn-back"><b>Back</b></NuxtLink>
+        <NuxtLink :to="`/posts`" class=""><button class="btn-back my-10 py-3 px-10  rounded-full shadow">Back</button></NuxtLink>
       </div>
     </div>
 
@@ -120,6 +120,7 @@ watch(doc, (newDoc) => {
 .content-renderer h1 {
   color: #003a70;
   font-size: 40px;
+  font-weight: 600;
 }
 
 .content-renderer p {
@@ -141,6 +142,7 @@ watch(doc, (newDoc) => {
 }
 
 .btn-back:hover {
-  background-color: #ddd;
+  background-color: #000;
+  transform: scale(1.05);
 }
 </style>

@@ -3,8 +3,8 @@
 <template>
   <div class="container px-5 py-5 mx-auto">
     <div class="text-center pb-4">
-      <form class="flex g-3 justify-evenly" @submit="serchPost">
-        <div class="col-auto">
+      <form class="flex flex-wrap g-3 justify-evenly" @submit="serchPost">
+        <div class="col-auto my-2">
           <input
             type="text"
             v-model="search"
@@ -14,7 +14,7 @@
             placeholder="Search Article Here.."
           />
         </div>
-        <div class="col-auto">
+        <div class="col-auto my-2">
           <select
             v-model="selectedFilter"
             @change="applyFilter"
@@ -27,7 +27,7 @@
             <option value="datedesc">Sort By Date & Time Desc</option>
           </select>
         </div>
-        <div class="col-auto">
+        <div class="col-auto my-2">
           <select
             v-model="selectedCategory"
             @change="applyFilter"
@@ -46,7 +46,7 @@
           </select>
         </div>
 
-        <div class="col-auto" v-if="selectedCategory">
+        <div class="col-auto my-2" v-if="selectedCategory">
           <select
             v-model="selectedSubCategory"
             @change="applyFilter"
@@ -62,7 +62,7 @@
             </option>
           </select>
         </div>
-        <div class="col-auto">
+        <div class="col-auto my-2">
           <a href="" class=" btn-clear px-3 py-2 rounded-md shadow-md " @click="clearFilter"
             >Clear</a
           >

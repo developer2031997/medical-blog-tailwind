@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
   css: [
     // '~~/layout/main.css',
-    '~/assets/css/tailwind.css'
+    '@/assets/css/tailwind.css',
   ],
   postcss: {
     plugins: {
@@ -12,7 +12,8 @@ export default defineNuxtConfig({
     },
   },
   build: {
-    transpile: []
+    transpile: [],
+
   },
   modules: [
     '@nuxt/content',
