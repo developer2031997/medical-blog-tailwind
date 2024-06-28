@@ -124,11 +124,11 @@
       
     </div>
 
-    <div v-if="loading" class="row text-center py-5 my-5" >
+    <div v-if="loading" class="text-center py-5 my-5 h-screen" >
           <h2 class="text-4xl " >Data Is Fetching, Please Wait ....</h2>
         </div>
 
-        <div v-if="noDataFound" class="row text-center py-5 my-5">
+        <div v-if="noDataFound" class="text-center py-5 my-5 h-screen">
           <h2 class="text-4xl ">Article Not Found...</h2>
         </div>
      
