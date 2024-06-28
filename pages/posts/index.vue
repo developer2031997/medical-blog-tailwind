@@ -120,7 +120,18 @@
           </div>
         </NuxtLink>
       </div>
+
+      
     </div>
+
+    <div v-if="loading" class="row text-center py-5 my-5" >
+          <h2 class="text-4xl " >Data Is Fetching, Please Wait ....</h2>
+        </div>
+
+        <div v-if="noDataFound" class="row text-center py-5 my-5">
+          <h2 class="text-4xl ">Article Not Found...</h2>
+        </div>
+     
   </div>
 </template>
 
